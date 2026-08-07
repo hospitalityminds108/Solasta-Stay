@@ -1,0 +1,76 @@
+.logo__class, .footer__logo, .offcanvase__logo{width: 170px;}
+.txt-cnt{text-align: center;}
+.pb-30{padding-bottom: 30px !important;}
+.txt-sec{color: var(--taupe);}
+.mt-40{margin-top: 40px;}
+.ic-wd{width: 52px;}
+.ai-cnt{align-items: center !important;}
+.clr-h{color: var(--brown) !important;}
+.txt-wht{color: #fff !important;}
+.blg-h{font-size: 20px;line-height: 30px;}
+.blog__details__content a{color: var(--brown);}
+.blog__details__content h3{font-size: 25px;}
+.cut-icn{filter: brightness(0) saturate(100%) invert(85%) sepia(29%) saturate(681%) hue-rotate(338deg) brightness(71%) contrast(107%) !important;}
+.cut-org{ filter: brightness(0) saturate(100%) invert(63%) sepia(20%) saturate(500%) hue-rotate(350deg) brightness(95%) contrast(90%);}
+@media (max-width: 700px) {.rts__card.is__home__three{padding: 0 30px;}}
+
+#contact-form{width:100%;}
+.form-group{margin-bottom:20px;}
+#contact-form input,#contact-form textarea{width:100%;padding:12px;border:1px solid var(--rts-border);border-radius:6px;font-size:14px;}
+.btn-submit{background:var(--brown);color:#fff;padding:12px 30px;border:none;border-radius:6px;cursor:pointer;font-size:16px;transition:var(--transition);}
+.btn-submit:hover{background:var(--gold);}
+
+/* =========================================================
+   Brand palette confirmation (Beige / Muted Cocoa Brown /
+   Champagne Gold / Cream / Warm Taupe / White)
+   Same variables already declared in style.css :root — kept
+   here too so custom.css stays palette-correct on its own.
+   ========================================================= */
+:root{
+  --beige: #E9DDCF;   /* main background, section backgrounds */
+  --brown: #6A4E3B;   /* headings, nav text, footer */
+  --gold:  #B9985A;   /* buttons, icons, hover, highlights */
+  --cream: #F8F4EE;   /* cards, forms, content backgrounds */
+  --taupe: #A68B74;   /* borders, secondary text, dividers */
+  --white: #FFFFFF;   /* cards, overlays, content containers */
+}
+
+/* =========================================================
+   Glassy header — frosted glass panel treatment.
+   Structure, position, nav items and logo are unchanged;
+   only the header's surface becomes a translucent, blurred
+   glass panel instead of a flat solid one.
+   ========================================================= */
+.header__function{
+  background: rgba(255, 255, 255, 0.55) !important;
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border-bottom: 1px solid rgba(166, 139, 116, 0.25);
+  transition: background .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+.header__function.is__sticky{
+  background: rgba(255, 255, 255, 0.78) !important;
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border-bottom: 1px solid rgba(166, 139, 116, 0.18);
+  box-shadow: 0 8px 24px rgba(58, 46, 36, 0.10);
+}
+
+/* =========================================================
+   Glassy footer — same frosted-glass surface treatment as
+   the header, in the footer's own espresso brown tone.
+   Structure, widgets, links and text colors are unchanged;
+   only the flat solid background becomes translucent glass.
+   ========================================================= */
+.footer,
+.rts__footer,
+.footer__background,
+.rts__footer.is__common__footer,
+.rts__footer.is__home__four.footer__background,
+.rts__footer.is__footer__two.footer__background,
+.rts__footer.is__home__six.footer__background,
+.rts__footer.is__home__five.footer__background{
+  background-color: rgba(47, 36, 28, 0.85) !important;
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+}
