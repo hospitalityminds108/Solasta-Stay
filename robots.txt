@@ -1,0 +1,8 @@
+User-agent: *		
+Allow: /		
+		
+# Block admin or unnecessary paths (if any)		
+Disallow: /admin/		
+Disallow: /cgi-bin/		
+		
+Sitemap: https://solastastays.com/sitemap.xml		
