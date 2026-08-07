@@ -1,3 +1,159 @@
+   @import url('https://fonts.googleapis.com/css2?family=Dream+Avenue&display=swap');
+  
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6,
+  .logo, .fxhdr__logo a,
+  .section-title, .room-body h3,
+  .banquet-text .section-title,
+  .reviewer h6,
+  .footer__widget__wrapper .rts__widget .widget__title,
+  .page__hero__content h1,
+  .room__details .room__title,
+  .single__slider__item.is__home .slider__author__info__content h6,
+  .fxhdr__nav .fxhdr__dropdown a,
+  .fxhdr__cta,
+  .btn {
+    font-family: 'Dream Avenue', 'Gilda Display', serif !important;
+  }
+  
+  body, p, span, a, li, input, textarea, button {
+    font-family: 'Jost', sans-serif;
+  }
+
+  /* Responsive - Hide Book Now button on mobile */
+  @media (max-width: 768px) {
+    .fxhdr__cta {
+      display: none !important;
+    }
+    .btn-fill {
+      display: inline-flex;
+    }
+    .hero-btns .btn-fill {
+      display: inline-flex;
+    }
+  }
+
+  /* Gallery - equal image sizing */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 160px;
+    gap: 14px;
+  }
+  .gallery-grid .g-item {
+    background-size: cover !important;
+    background-position: center !important;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,.85);
+    font-family: 'Gilda Display', serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.4s ease;
+    min-height: 160px;
+  }
+  .gallery-grid .g-item.hidden {
+    display: none;
+  }
+  .gallery-grid .g-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+  .gallery-grid .g-item span {
+    position: relative;
+    z-index: 2;
+    letter-spacing: .5px;
+    background: rgba(0,0,0,0.4);
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .gallery-grid .g-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(58,46,36,.15);
+    border-radius: 6px;
+  }
+  .gallery-grid .g-item.g1 { grid-column: span 2; grid-row: span 2; min-height: 340px; }
+  .gallery-grid .g-item.g4 { grid-row: span 2; min-height: 340px; }
+  
+  @media (max-width: 768px) {
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 140px;
+    }
+    .gallery-grid .g-item.g1,
+    .gallery-grid .g-item.g4 {
+      grid-column: span 2;
+      grid-row: span 1;
+      min-height: 160px;
+    }
+  }
+  @media (max-width: 480px) {
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 120px;
+      gap: 10px;
+    }
+    .gallery-grid .g-item.g1,
+    .gallery-grid .g-item.g4 {
+      grid-column: span 2;
+      grid-row: span 1;
+      min-height: 140px;
+    }
+    .gallery-grid .g-item span {
+      font-size: 10px;
+      padding: 4px 10px;
+    }
+  }
+
+  /* Gallery lightbox overlay */
+  .gallery-lightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    cursor: pointer;
+  }
+  .gallery-lightbox.active {
+    display: flex;
+  }
+  .gallery-lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+  .gallery-lightbox .close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-family: 'Jost', sans-serif;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+  }
+  .gallery-lightbox .close-lightbox:hover {
+    opacity: 1;
+  }
+ 
+ 
  :root{
         --beige:#E9DDCF;
         --brown:#6A4E3B;
