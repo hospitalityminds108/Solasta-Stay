@@ -10707,7 +10707,7 @@ textarea:focus-visible, input:focus-visible {
   content: "";
   height: 100%;
   width: 100%;
-  background-color:#A68874;
+  background-color:#E9DDCF;
   z-index: -1;
   top: 0;
   left: 40%;
