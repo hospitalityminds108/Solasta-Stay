@@ -41,6 +41,95 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- main style custom css -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/custom.css">
+
+    <style>
+        /* Brand Font Override - Dream Avenue */
+        @import url('https://fonts.googleapis.com/css2?family=Dream+Avenue&display=swap');
+        
+        h1, h2, h3, h4, h5, h6,
+        .h1, .h2, .h3, .h4, .h5, .h6,
+        .section-title, .content__title,
+        .widget__title, .page__hero__content h1,
+        .facility__content .content__title,
+        .card-title {
+            font-family: 'Dream Avenue', 'Gilda Display', serif !important;
+        }
+        
+        body, p, span, a, li, input, textarea, button {
+            font-family: 'Jost', sans-serif;
+        }
+
+        /* Facility section - text color matching the about section above */
+        .facility__content .section__content__left .subtitle__icon__two {
+            color: var(--gold) !important;
+        }
+        .facility__content .content__title {
+            color: var(--brown) !important;
+        }
+        .facility__content .card-title {
+            color: var(--brown) !important;
+        }
+        .facility__content .card .icon img {
+            filter: brightness(0) saturate(100%) invert(35%) sepia(15%) saturate(600%) hue-rotate(340deg) brightness(90%) contrast(90%);
+        }
+        .facility__content .card .icon .cut-org {
+            filter: brightness(0) saturate(100%) invert(35%) sepia(15%) saturate(600%) hue-rotate(340deg) brightness(90%) contrast(90%);
+        }
+        
+        /* Override the dark background for facility section to match page style */
+        .facility__area.is__about.has__background {
+            background-color: var(--cream) !important;
+        }
+        .facility__area.is__about::before {
+            display: none;
+        }
+        .facility__area .facility__image {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        /* Facility cards styling */
+        .facility__content .rts__card.is__home__three {
+            background: var(--white);
+            padding: 20px 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(106,78,59,.08);
+            transition: all .3s ease;
+            max-width: 100%;
+            text-align: center;
+        }
+        .facility__content .rts__card.is__home__three:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(106,78,59,.15);
+        }
+        .facility__content .rts__card.is__home__three .icon {
+            margin-bottom: 10px;
+        }
+        .facility__content .rts__card.is__home__three .icon img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+        .facility__content .rts__card.is__home__three .card-title {
+            font-size: 16px;
+            margin-bottom: 0;
+            color: var(--brown) !important;
+        }
+        
+        @media (max-width: 768px) {
+            .facility__content .rts__card.is__home__three {
+                padding: 15px 10px;
+            }
+            .facility__content .rts__card.is__home__three .icon img {
+                width: 32px;
+                height: 32px;
+            }
+            .facility__content .rts__card.is__home__three .card-title {
+                font-size: 14px;
+            }
+        }
+    </style>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -293,16 +382,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="col-lg-6">
                     <div class="facility__content">
                         <div class="section__content__left">
-                            <span class="h6 subtitle__icon__two d-block wow fadeInUp">Our Best</span>
-                            <h2 class="content__title h2 lh-1 txt-wht"> Amenities & Facilities</h2>
+                            <span class="h6 subtitle__icon__two d-block wow fadeInUp" style="color: var(--gold) !important;">Our Best</span>
+                            <h2 class="content__title h2 lh-1" style="color: var(--brown) !important;">Amenities &amp; Facilities</h2>
                         </div>
                         <div class="row mt-20 g-5 wow fadeInUp" data-wow-delay=".5s">
                             <div class="col-lg-6 col-md-6">
                                 <div class="card rts__card no-border is__home__three">
                                     <div class="card-body">
-                                        <div class="icon ic-wd cut-org"><img src="assets/images/icon/wifi.svg" alt="WiFi"></div>
+                                        <div class="icon ic-wd"><img src="assets/images/icon/wifi.svg" alt="WiFi" style="filter: brightness(0) saturate(100%) invert(35%) sepia(15%) saturate(600%) hue-rotate(340deg) brightness(90%) contrast(90%);"></div>
                                         <a href="#">
-                                            <h6 class="card-title h6 mb-15 txt-wht">Wi-Fi</h6>
+                                            <h6 class="card-title h6 mb-15" style="color: var(--brown) !important;">Wi-Fi</h6>
                                         </a>
                                     </div>
                                 </div>
@@ -310,9 +399,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="col-lg-6 col-md-6">
                                 <div class="card rts__card no-border is__home__three">
                                     <div class="card-body">
-                                        <div class="icon ic-wd"><img src="assets/imgs/icons/car-parking.png" alt="Parking"></div>
+                                        <div class="icon ic-wd"><img src="assets/imgs/icons/car-parking.png" alt="Parking" style="filter: brightness(0) saturate(100%) invert(35%) sepia(15%) saturate(600%) hue-rotate(340deg) brightness(90%) contrast(90%);"></div>
                                         <a href="#">
-                                            <h6 class="card-title h6 mb-15 txt-wht"> Parking</h6>
+                                            <h6 class="card-title h6 mb-15" style="color: var(--brown) !important;">Parking</h6>
                                         </a>
                                     </div>
                                 </div>
@@ -320,9 +409,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="col-lg-6 col-md-6">
                                 <div class="card rts__card no-border is__home__three">
                                     <div class="card-body">
-                                        <div class="icon ic-wd"><img src="assets/imgs/icons/arch.png" alt="Banquet Hall"></div>
+                                        <div class="icon ic-wd"><img src="assets/imgs/icons/arch.png" alt="Banquet Hall" style="filter: brightness(0) saturate(100%) invert(35%) sepia(15%) saturate(600%) hue-rotate(340deg) brightness(90%) contrast(90%);"></div>
                                         <a href="#">
-                                            <h6 class="card-title h6 mb-15 txt-wht"> Banquet Hall</h6>
+                                            <h6 class="card-title h6 mb-15" style="color: var(--brown) !important;">Banquet Hall</h6>
                                         </a>
                                     </div>
                                 </div>
@@ -330,9 +419,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="col-lg-6 col-md-6">
                                 <div class="card rts__card no-border is__home__three">
                                     <div class="card-body">
-                                        <div class="icon ic-wd cut-org"><img src="assets/images/icon/security.svg" alt="24-Hour Security"></div>
+                                        <div class="icon ic-wd"><img src="assets/images/icon/security.svg" alt="24-Hour Security" style="filter: brightness(0) saturate(100%) invert(35%) sepia(15%) saturate(600%) hue-rotate(340deg) brightness(90%) contrast(90%);"></div>
                                         <a href="#">
-                                            <h6 class="card-title h6 mb-15 txt-wht">Room Service</h6>
+                                            <h6 class="card-title h6 mb-15" style="color: var(--brown) !important;">Room Service</h6>
                                         </a>
                                     </div>
                                 </div>
@@ -340,9 +429,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="col-lg-6 col-md-6">
                                 <div class="card rts__card no-border is__home__three">
                                     <div class="card-body">
-                                        <div class="icon ic-wd"><img src="assets/imgs/icons/air-conditioner.png" alt="Air Conditioning"></div>
+                                        <div class="icon ic-wd"><img src="assets/imgs/icons/air-conditioner.png" alt="Air Conditioning" style="filter: brightness(0) saturate(100%) invert(35%) sepia(15%) saturate(600%) hue-rotate(340deg) brightness(90%) contrast(90%);"></div>
                                         <a href="#">
-                                            <h6 class="card-title h6 mb-15 txt-wht"> Air Conditioning</h6>
+                                            <h6 class="card-title h6 mb-15" style="color: var(--brown) !important;">Air Conditioning</h6>
                                         </a>
                                     </div>
                                 </div>
@@ -350,9 +439,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="col-lg-6 col-md-6">
                                 <div class="card rts__card no-border is__home__three">
                                     <div class="card-body">
-                                        <div class="icon ic-wd"><img src="assets/imgs/icons/bed-furniture.png" alt="Housekeeping"></div>
+                                        <div class="icon ic-wd"><img src="assets/imgs/icons/bed-furniture.png" alt="Housekeeping" style="filter: brightness(0) saturate(100%) invert(35%) sepia(15%) saturate(600%) hue-rotate(340deg) brightness(90%) contrast(90%);"></div>
                                         <a href="#">
-                                            <h6 class="card-title h6 mb-15 txt-wht">Housekeeping</h6>
+                                            <h6 class="card-title h6 mb-15" style="color: var(--brown) !important;">Housekeeping</h6>
                                         </a>
                                     </div>
                                 </div>
@@ -360,9 +449,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="col-lg-6 col-md-6">
                                 <div class="card rts__card no-border is__home__three">
                                     <div class="card-body">
-                                        <div class="icon ic-wd"><img src="assets/imgs/icons/cctv.png" alt="Security"></div>
+                                        <div class="icon ic-wd"><img src="assets/imgs/icons/cctv.png" alt="Security" style="filter: brightness(0) saturate(100%) invert(35%) sepia(15%) saturate(600%) hue-rotate(340deg) brightness(90%) contrast(90%);"></div>
                                         <a href="#">
-                                            <h6 class="card-title h6 mb-15 txt-wht">Security</h6>
+                                            <h6 class="card-title h6 mb-15" style="color: var(--brown) !important;">Security</h6>
                                         </a>
                                     </div>
                                 </div>
@@ -370,9 +459,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="col-lg-6 col-md-6">
                                 <div class="card rts__card no-border is__home__three">
                                     <div class="card-body">
-                                        <div class="icon ic-wd"><img src="assets/imgs/icons/elevator.png" alt="Elevator"></div>
+                                        <div class="icon ic-wd"><img src="assets/imgs/icons/elevator.png" alt="Elevator" style="filter: brightness(0) saturate(100%) invert(35%) sepia(15%) saturate(600%) hue-rotate(340deg) brightness(90%) contrast(90%);"></div>
                                         <a href="#">
-                                            <h6 class="card-title h6 mb-15 txt-wht"> Elevator</h6>
+                                            <h6 class="card-title h6 mb-15" style="color: var(--brown) !important;">Elevator</h6>
                                         </a>
                                     </div>
                                 </div>
