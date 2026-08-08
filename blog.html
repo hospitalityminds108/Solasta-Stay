@@ -646,6 +646,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       })();
     </script>
 
+	    // Mobile dropdown toggle for Rooms
+<script>
+    (function() {
+  var dropdownParents = document.querySelectorAll('.fxhdr__has-dropdown');
+  
+  dropdownParents.forEach(function(parent) {
+    var link = parent.querySelector('a');
+    var dropdown = parent.querySelector('.fxhdr__dropdown');
+    
+    if (link && dropdown) {
+      link.addEventListener('click', function(e) {
+        // Only on mobile (max-width: 991px)
+        if (window.innerWidth <= 991) {
+          e.preventDefault();
+          parent.classList.toggle('is-open');
+        }
+      });
+    }
+  });
+})();
+    </script>
+
+
 </body>
 
 </html>
