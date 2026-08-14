@@ -78,7 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
 
         .btn-submit:hover {
-            background: #B9985A;
+            background: #a7874a;
         }
     </style>
     <script type="application/ld+json">
@@ -321,6 +321,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <input type="email" name="email" placeholder="Your Email" required>
                             </div>
 
+                            <!-- NEW: Mobile Number field with 10-digit limit -->
+                            <div class="form-group">
+                                <label>Mobile Number</label>
+                                <input type="tel" name="mobile" id="mobile" placeholder="Enter 10-digit mobile number" 
+                                       maxlength="10" pattern="[0-9]{10}" inputmode="numeric" required
+                                       title="Please enter exactly 10 digits">
+                            </div>
+
                             <div class="form-group">
                                 <label>Your Message</label>
                                 <textarea name="message" placeholder="Write your message..." rows="5"
@@ -330,30 +338,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <button type="submit" class="btn-submit">Send Message</button>
 
                         </form>
-                        <!-- <form action="mailer.php" method="post" class="rts__contact__form" id="contact-form">
-                            <div class="form-input">
-                                <label for="name">Your Name</label>
-                                <div class="pr">
-                                    <input type="text" id="name" name="name" placeholder="Your Name" required>
-                                    <i class="flaticon-user"></i>
-                                </div>
-                            </div>
-                            <div class="form-input">
-                                <label for="email">Your Email</label>
-                                <div class="pr">
-                                    <input type="email" id="email" name="email" placeholder="Your Email" required>
-                                    <i class="flaticon-envelope"></i>
-                                </div>
-                            </div>
-                            <div class="form-input">
-                                <label for="msg">Your Message</label>
-                                <div class="pr">
-                                    <textarea id="msg" name="msg" placeholder="Message" required></textarea>
-                                    <img src="assets/images/icon/message.svg" width="20" height="20" alt="">
-                                </div>
-                            </div>
-                            <button type="submit" class="theme-btn btn-style fill w-100"><span>Send Message</span></button>
-                        </form> -->
                         <div id="form-messages" class="mt-20"></div>
                     </div>
                 </div>
@@ -385,8 +369,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 Address: <a href="https://maps.app.goo.gl/cqArDkW4Xynu8Ucw9" class="txt-sec">8th floor,
                                     Moonstone Buzz, Bengaluru - Mumbai Hwy, opposite JSPM Institute, Bapu Buwaji Nagar,
                                     Tathawade, Pimpri-Chinchwad, Pune, Maharashtra 411033</a> <br>
-                                Telephone: <a href="tel:+918484830243" class="txt-sec">+91 8484830243</a> <br>
-                                Email: <a href="mailto:smmsolastastaysbanquets@gmail.com"
+                                Telephone: <a href="tel:+918484830243" class="txt-sec">+91 8484830243</a> <br>
+                                Email: <a href="mailto:smmsolastastaysbanquets@gmail.com"
                                     class="txt-sec">smmsolastastaysbanquets@gmail.com</a>
                             </p>
                             <p>
@@ -667,7 +651,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
 })();
     </script>
-
+    
+    <!-- simple client-side validation for 10-digit mobile -->
+    <script>
+    (function() {
+        var mobileInput = document.getElementById('mobile');
+        if (mobileInput) {
+            mobileInput.addEventListener('input', function() {
+                this.value = this.value.replace(/\D/g, '').slice(0, 10);
+            });
+        }
+    })();
+    </script>
 
 </body>
 
