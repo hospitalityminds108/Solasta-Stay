@@ -10,10 +10,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="About Solasta Stays – Hotel Near Wakad Pune">
- <meta property="og:description" content="Learn about Solasta Stays, a trusted hotel near Wakad Pune offering premium rooms and banquet facilities for all guests.">
- <meta property="og:url" content="https://solastastays.com/about">
- <meta property="og:type" content="website">
- <meta property="og:image" content="https://solastastays.com/assets/imgs/Property/ext2.webp">
+    <meta property="og:description" content="Learn about Solasta Stays, a trusted hotel near Wakad Pune offering premium rooms and banquet facilities for all guests.">
+    <meta property="og:url" content="https://solastastays.com/about">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://solastastays.com/assets/imgs/Property/ext2.webp">
 
     <meta name="description" content="Learn about Solasta Stays, a comfortable hotel near Hinjewadi in Wakad Pune. Ideal for business travelers, corporate stays, and guests looking for quality rooms and banquet facilities.">
     <meta name="keywords" content="hotel near hinjewadi​">
@@ -91,7 +91,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             overflow: hidden;
         }
         
-        /* Facility cards styling */
+        /* Facility cards styling — icon above title */
         .facility__content .rts__card.is__home__three {
             background: var(--white);
             padding: 20px 15px;
@@ -100,6 +100,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             transition: all .3s ease;
             max-width: 100%;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .facility__content .rts__card.is__home__three:hover {
             transform: translateY(-5px);
@@ -107,6 +110,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
         .facility__content .rts__card.is__home__three .icon {
             margin-bottom: 10px;
+            order: -1; /* ensures icon appears above title */
         }
         .facility__content .rts__card.is__home__three .icon img {
             width: 40px;
@@ -117,6 +121,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             font-size: 16px;
             margin-bottom: 0;
             color: var(--brown) !important;
+            order: 0;
+        }
+        /* optional: ensure card body stays flexible */
+        .facility__content .rts__card.is__home__three .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 0;
         }
         
         @media (max-width: 768px) {
@@ -364,6 +377,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="about__content">
                         <span class="h6 subtitle__icon__two d-block wow fadeInUp">Seamless Stays. Memorable Celebrations.</span>
                         <h2 class="font-xl wow fadeInUp">A Space Built for Comfort and Celebrations</h2>
+                        <p class="font-sm mt-30 wow fadeInUp" data-wow-delay=".3s">
+                            Solasta symbolises warmth, happiness and the pleasure of feeling welcomed. Through heartfelt hospitality , comfortable stays and memorable celebrations, we turn every visit into a cherished experience
+                        </p>
                         <p class="font-sm mt-30 wow fadeInUp" data-wow-delay=".3s">
                             Solasta Stays & Banquets is designed for travellers, families, corporate guests, and event hosts who value convenience, comfort, and warm hospitality. Whether you're visiting for business meetings, corporate travel, a relaxing break, or a special celebration, we ensure every stay feels smooth, stress-free, and perfectly managed.
                         </p>
